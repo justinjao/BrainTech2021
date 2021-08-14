@@ -76,7 +76,7 @@ struct SignUPView: View {
                     Spacer()
                 }
             } else {
-                ContentView()
+                HomeTabView()
                     .transition(.scale)
             }
         }

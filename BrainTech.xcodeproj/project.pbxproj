@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		157FEE5826C75FD500795AD9 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157FEE5726C75FD500795AD9 /* Color.swift */; };
+		157FEE5E26C782E600795AD9 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157FEE5D26C782E600795AD9 /* HomeTabView.swift */; };
+		157FEE6026C7859500795AD9 /* OBPlatformSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157FEE5F26C7859400795AD9 /* OBPlatformSelectionView.swift */; };
 		D00AAEF326C744ED00E00AE6 /* SignUPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AAEF226C744ED00E00AE6 /* SignUPView.swift */; };
 		D0E67B5126C6E0A8007917FB /* BrainTechApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E67B5026C6E0A8007917FB /* BrainTechApp.swift */; };
 		D0E67B5326C6E0A8007917FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E67B5226C6E0A8007917FB /* ContentView.swift */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		157FEE5726C75FD500795AD9 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		157FEE5D26C782E600795AD9 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		157FEE5F26C7859400795AD9 /* OBPlatformSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBPlatformSelectionView.swift; sourceTree = "<group>"; };
 		D00AAEF226C744ED00E00AE6 /* SignUPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUPView.swift; sourceTree = "<group>"; };
 		D0E67B4D26C6E0A8007917FB /* BrainTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E67B5026C6E0A8007917FB /* BrainTechApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTechApp.swift; sourceTree = "<group>"; };
@@ -79,8 +83,10 @@
 		157FEE5126C756FF00795AD9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				157FEE5F26C7859400795AD9 /* OBPlatformSelectionView.swift */,
 				D0E67B5226C6E0A8007917FB /* ContentView.swift */,
 				D00AAEF226C744ED00E00AE6 /* SignUPView.swift */,
+				157FEE5D26C782E600795AD9 /* HomeTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,8 +321,10 @@
 			files = (
 				D0E67B5326C6E0A8007917FB /* ContentView.swift in Sources */,
 				157FEE5826C75FD500795AD9 /* Color.swift in Sources */,
+				157FEE5E26C782E600795AD9 /* HomeTabView.swift in Sources */,
 				D0E67B5126C6E0A8007917FB /* BrainTechApp.swift in Sources */,
 				D00AAEF326C744ED00E00AE6 /* SignUPView.swift in Sources */,
+				157FEE6026C7859500795AD9 /* OBPlatformSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
