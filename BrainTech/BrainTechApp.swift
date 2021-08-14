@@ -11,7 +11,44 @@ import SwiftUI
 struct BrainTechApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                NavigationView {
+                    LoginPage()
+                }
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Home")
+                }
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "chart.pie")
+                    Text("Statistics")
+                }
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "note.text")
+                    Text("Journal")
+                }
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "music.note.list")
+                    Text("Recommendations")
+                }
+            }
         }
+    }
+}
+
+struct BrainTechApp_Previews: PreviewProvider {
+    static var previews: some View {
+        Text("Health Tunes")
+            .foregroundColor(.blue)
+            .bold()
     }
 }
