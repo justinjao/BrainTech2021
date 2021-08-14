@@ -11,5 +11,5 @@ extension Color {
     static let body = Color(red: 77.0/255.0, green: 77.0/255.0, blue: 79.0/255.0)
     static let lightBlue = Color(red: 129.0/255.0, green: 200.0/255.0, blue: 215.0/255.0)
     static let lightGrey = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
-    static let appleRed = Color(red: 252.0/255.0, green: 60.0/255.0, blue: 68.0/255.0, opacity: 1.0)
+    static let appleMusic = Color(red: 252.0/255.0, green: 60.0/255.0, blue: 68.0/255.0, opacity: 1.0)
 }

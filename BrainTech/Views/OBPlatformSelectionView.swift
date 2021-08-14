@@ -15,45 +15,81 @@ struct OBPlatformSelectionView: View {
     @State private var isShowingOBQuestion0View = false
     
     var body: some View {
-        VStack{
-             Text("Which platform do you want us to access?")
-                                            .bold()
-                                            .multilineTextAlignment(.center)
-                                
-                Button(action: {
-                print("hello world")
-                })
-         {
-            Text("Spotify")
-                .fontWeight(.bold)
-                    .font(.body)
-                    .padding()
-                    .background(Color.green)
-                    .cornerRadius(30)
-                    .foregroundColor(.white)
-                    .padding(5)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .stroke(Color.green, lineWidth: 5)
-                    )
-                       }
-        Button(action: {
-        print("hello world")
-        })
- {
-    Text("Apple Music")
-        .fontWeight(.bold)
-            .font(.body)
-            .padding()
-            .background(appleRed)
-            .cornerRadius(30)
-            .foregroundColor(.white)
-            .padding(5)
-            .overlay(
-                RoundedRectangle(cornerRadius: 30)
-                    .stroke(appleRed, lineWidth: 5)
-            )
-               }
+        NavigationView {
+            VStack{
+                
+                Spacer()
+                
+                
+                VStack(spacing: 50) {
+                    
+                    Text("Which platform do you want to use?")
+                        .foregroundColor(.body)
+                    
+                    
+                    // Streaming music buttons
+                    VStack(spacing: 20) {
+                        
+                        NavigationLink(
+                            destination: OBIntroView(),
+                            label: {
+                                Text("Apple Music")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.appleMusic)
+                                    .cornerRadius(10)
+                            })
+                        
+                        NavigationLink(
+                            destination: OBIntroView(),
+                            label: {
+                                Text("Amazon Music")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.blue)
+                                    .cornerRadius(10)
+                            })
+                        
+                        NavigationLink(
+                            destination: OBIntroView(),
+                            label: {
+                                Text("Spotify")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.green)
+                                    .cornerRadius(10)
+                            })
+                        
+                        NavigationLink(
+                            destination: OBIntroView(),
+                            label: {
+                                Text("Tidal")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .frame(width: 220, height: 60, alignment: .center)
+                                    .background(Color.body)
+                                    .cornerRadius(10)
+                            })
+                    }
+                    
+                }
+                
+                
+                
+                
+                
+                Spacer()
+                
+                
+            }
+            .navigationBarTitle("Welcome")
         }
     }
 }

@@ -39,18 +39,25 @@ struct SignUPView: View {
                             .background(lightGrey)
                             .cornerRadius(10)
                             .padding(.bottom, 20)
+                            .keyboardType(.emailAddress)
+                            .textContentType(.emailAddress)
+                            .autocapitalization(.none)
                         
                         TextField("Username", text: $username)
                             .padding()
                             .background(lightGrey)
                             .cornerRadius(10)
                             .padding(.bottom, 20)
+                            .disableAutocorrection(true)
+                            .textContentType(.username)
+                            .autocapitalization(.none)
                         
                         SecureField("Password", text: $password)
                             .padding()
                             .background(lightGrey)
                             .cornerRadius(10)
                             .padding(.bottom, 20)
+//                            .textContentType(.password)
                     }
                     .padding(.horizontal)
                     
@@ -76,7 +83,7 @@ struct SignUPView: View {
                     Spacer()
                 }
             } else {
-                HomeTabView()
+                OBPlatformSelectionView()
                     .transition(.scale)
             }
         }
