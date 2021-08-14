@@ -13,7 +13,7 @@ struct BrainTechApp: App {
         WindowGroup {
             TabView {
                 NavigationView {
-                    LoginPageView()
+                    SignUPView()
                 }
                 .tabItem {
                     Image(systemName: "house")
