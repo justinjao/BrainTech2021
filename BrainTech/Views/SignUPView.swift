@@ -14,61 +14,71 @@ struct SignUPView: View {
     @State var email: String = ""
     @State var password: String = ""
     
-    @State var showSignUpView = false
+    @State var showSignUpView = true
     
     let lightGrey = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
     
     var body: some View {
         
-        VStack {
-            
-            Spacer()
-            
-            VStack {
-                Text("Create an account")
-                    .font(.largeTitle)
-                    .foregroundColor(.body)
-                    .fontWeight(.semibold)
-                    .padding(.bottom)
-                
-                
-                TextField("Email", text: $email)
-                    .padding()
-                    .background(lightGrey)
-                    .cornerRadius(10)
-                    .padding(.bottom, 20)
-                
-                TextField("Username", text: $username)
-                    .padding()
-                    .background(lightGrey)
-                    .cornerRadius(10)
-                    .padding(.bottom, 20)
-                
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(lightGrey)
-                    .cornerRadius(10)
-                    .padding(.bottom, 20)
+        Group {
+            if showSignUpView {
+                VStack {
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("Create an account")
+                            .font(.largeTitle)
+                            .foregroundColor(.body)
+                            .fontWeight(.semibold)
+                            .padding(.bottom)
+                        
+                        
+                        TextField("Email", text: $email)
+                            .padding()
+                            .background(lightGrey)
+                            .cornerRadius(10)
+                            .padding(.bottom, 20)
+                        
+                        TextField("Username", text: $username)
+                            .padding()
+                            .background(lightGrey)
+                            .cornerRadius(10)
+                            .padding(.bottom, 20)
+                        
+                        SecureField("Password", text: $password)
+                            .padding()
+                            .background(lightGrey)
+                            .cornerRadius(10)
+                            .padding(.bottom, 20)
+                    }
+                    .padding(.horizontal)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            self.showSignUpView = false
+                        }
+                        
+                    }, label: {
+                        Text("Sign Up")
+                            .font(.headline)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(width: 220, height: 60, alignment: .center)
+                            .background(Color.lightBlue)
+                            .cornerRadius(100)
+                        
+                    })
+        //            .disabled(username.isEmpty || email.isEmpty)
+                    
+                    Spacer()
+                }
+            } else {
+                ContentView()
+                    .transition(.scale)
             }
-            .padding(.horizontal)
-            
-            Spacer()
-            
-            Button(action: {
-                
-            }, label: {
-                Text("Sign Up")
-                    .font(.headline)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .frame(width: 220, height: 60, alignment: .center)
-                    .background(Color.lightBlue)
-                    .cornerRadius(100)
-                
-            })
-            .disabled(username.isEmpty || email.isEmpty)
-            
-            Spacer()
         }
     }
 }
